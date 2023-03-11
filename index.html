@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="dist/main.css">
+  <title>Rating - Frontend Mentor - Interactive rating component solution</title>
+  <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+</head>
+<body>
+  <main class="card">
+    <section class="card__display">
+      <aside class="card__front">
+        <span class="card__circle">
+          <svg height="48" width="48">
+            <circle cx="24" cy="24" r="24" stroke-width="3" fill="white" />
+          </svg>
+          <svg height="24" width="24">
+            <circle cx="12" cy="12" r="10" stroke="white" stroke-width="1" fill="transparent" />
+          </svg>
+        </span>
+        <p id="card-number" class="card__number">
+          0000 0000 0000 0000
+        </p>
+        <h3 class="card__details">
+          <p id="card-holder" class="card__holder"> Samuel Jolayemi</p>
+          <P id="card-date" class="card__date"> 19/02 </P>
+        </h3>
+      </aside>
+      <aside class="card__back">
+        <p id="card-cvc" class="card__cvc">
+          000
+        </p>
+      </aside>
+    </section>
+    <section class="card__input">
+      <form action="" method="post" class="form">
+        <label for="form-name" class="form__des">Cardholder Name</label>
+        <input type="text" id="form-name" name="form-name" class="form__input" placeholder="e.g Samuel Jolayemi">
+        <label for="form-number" class="form__des">Card Number</label>
+        <input type="text" id="form-number" name="form-number" class="form__input" placeholder="e.g 0000 0000 0000 0000" maxlength="16">
+        <aside class="form__con">
+          <label for="form-mth" class="form__des form__con-1">EXP.DATE</label>
+          <input type="text" id="form-month" name="form-mth" class="form__input form__con-2" placeholder="MM" maxlength="2">
+          <label for="form-yr" class="form__des form__con-3">(MM/YY)</label>
+          <input type="text" id="form-year" name="form-yr" class="form__input form__con-4" placeholder="YY" maxlength="2">
+          <label for="form-cvc" class="form__des form__con-5">Card Number</label>
+          <input type="text" id="form-cvc" name="form-cvc" class="form__input form__con-6" placeholder="e.g 123" maxlength="3">
+        </aside>
+        <botton type="submit" class="btn" id="confirm">
+          Confirm
+        </botton>
+      </form>
+      
+    </section>
+  </main>
+  
+    
+
+
+  <script src="app.js"></script>
+</body>
+</html>

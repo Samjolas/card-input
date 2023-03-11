@@ -1,0 +1,60 @@
+@use '../abstracts/variables' as a;
+
+.form {
+  width: 40rem;
+  display: grid;
+  gap: 1rem;
+  &__des {
+    color: a.$color-btn;
+    text-transform: uppercase;
+    font-size: a.$fs-sub;
+    color: a.$color-btn;
+  }
+  &__input {
+    height: 5rem;
+    border-radius: 1rem;
+    border: .15rem solid rgba(a.$color-sub-m, .45);
+    padding: 1rem;
+    font-family: a.$ff-main;
+    font-size: a.$fs-200;
+    box-shadow: .1rem .1rem .1rem rgba(a.$color-sub-m, .45);
+    &::placeholder {
+      color: rgba(a.$color-sub-m, .45);
+    }
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  &__con {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: inherit;
+    gap: 1rem;
+    &>* {
+      width: 100%;
+    }
+    &-1 {
+      grid-area: exp;
+    }
+    &-2 {
+      grid-area: exp-d;
+    }
+    &-3 {
+      grid-area: my;
+      margin-left: -3.5rem;
+    }
+    &-4 {
+      grid-area: my-d;
+    }
+    &-5 {
+      grid-area: cvc;
+    }
+    &-6 {
+      grid-area: cvc-d;
+    }
+    grid-template-areas: 
+    'exp my cvc cvc'
+    'exp-d my-d cvc-d cvc-d'
+    ;
+  }
+}
